@@ -25,7 +25,7 @@ try:
 
                 # Step 4: Create authors table
         cursor.execute("""
-                CREATE TABLE IF NOT EXISTS authors (
+                CREATE TABLE IF NOT EXISTS Authors (
                     author_id INT PRIMARY KEY,
                     author_name VARCHAR(215)
                 )
@@ -33,7 +33,7 @@ try:
 
                 # Step 5: Create books table
         cursor.execute("""
-                CREATE TABLE IF NOT EXISTS books (
+                CREATE TABLE IF NOT EXISTS Books (
                     book_id INT PRIMARY KEY,
                     title VARCHAR(130),
                     author_id INT,
@@ -45,7 +45,7 @@ try:
 
                 # Step 6: Create customers table
         cursor.execute("""
-                CREATE TABLE IF NOT EXISTS customers (
+                CREATE TABLE IF NOT EXISTS Customers (
                     customer_id INT PRIMARY KEY,
                     customer_name VARCHAR(215),
                     email VARCHAR(215),
@@ -55,7 +55,7 @@ try:
 
                 # Step 7: Create orders table
         cursor.execute("""
-                CREATE TABLE IF NOT EXISTS orders (
+                CREATE TABLE IF NOT EXISTS Orders (
                     order_id INT PRIMARY KEY,
                     customer_id INT,
                     order_date DATE,
@@ -65,7 +65,7 @@ try:
 
                 # Step 8: Create order_details table
         cursor.execute("""
-                CREATE TABLE IF NOT EXISTS order_details (
+                CREATE TABLE IF NOT EXISTS Order_details (
                     orderdetailid INT PRIMARY KEY,
                     order_id INT,
                     book_id INT,
