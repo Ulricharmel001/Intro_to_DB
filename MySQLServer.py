@@ -11,7 +11,7 @@ try:
         )
     mycursor = mydb.cursor()
     print(f"connected successfully to Database")
-except Exception as e :
+except mysql.connector.Error:
     print(f"unable to connect to DB {e} ")
 
 try:   # If the connection is successful, create the database , and if only the database doesnot exist
